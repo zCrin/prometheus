@@ -21,4 +21,11 @@ and write :
 On a browser tape http://\<your_domain_url\>/testmail.php
 
 If the email doesn't appear in your inbox check the spams.
-I advice you to create a new gmail adress to receive Prometheus' notifications : 
+I advice you to create a new gmail adress to receive Prometheus' notifications : https://github.com/zCrin/prometheus/wiki/Create-a-Notification-Email-Address
+
+###INSTALL PROMETHEUS###
+*Download all the files from this repo.
+*Upload them to /var/www
+*Test if the installation works by visiting http://\<you_domain_name\>
+*You should see a page with a digit code.
+*Set the CHMOD of the /conf directory at 777
