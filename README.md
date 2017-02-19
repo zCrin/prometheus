@@ -29,9 +29,9 @@ I advice you to create a new gmail adress to receive Prometheus' notifications :
 
 *Upload them to __/var/www__
 
-*Test if the installation works by visiting _http://\<you_domain_name\>_
+*Test if the installation works by visiting _http://\<you_domain_url\>_
 
 *You should see a page with a digit code.
 
-*Set the CHMOD of the /conf directory at 777
+*Set the CHMOD of the /conf directory at __777__
 
