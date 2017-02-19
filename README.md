@@ -1,4 +1,4 @@
-# Prometheus
+# Prometheus V. 0.82
 Homebridge WebServer. Access HomeKit device online.
 
 First, you'll need to install HomeBridge from this repo : https://github.com/nfarina/homebridge.
