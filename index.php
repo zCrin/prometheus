@@ -1,16 +1,6 @@
 <?php
-	session_set_cookie_params(0, '/', '.' . $_SERVER['SERVER_NAME']);
-	session_start();
-	if(isset($_COOKIE['device_allowed'])){
-		$json = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/conf/allowed_devices.conf'), true);
-		if(in_array($_COOKIE['device_allowed'], $json['authorised_devices'])){
-			$_SESSION['allowed'] = true;
-		}
-	}
-	if(!isset($_SESSION['allowed'])){
-		$_SESSION['allowed'] = 'null';
-	} 
-	if($_SESSION['allowed'] != 'true'){
+    $user = new User(); //init a new User class
+    if($user->verify_connection(false) == false){
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,4 +61,8 @@ function show_date(){
 	$jours = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche');
 	$jourN = date("N") - 1;
 	echo $jours[$jourN] . ' ' . date('j') . ' ' . $mois[$moisN];
+}
+function __autoload($class_name) {
+    //auto include all the classes
+    include_once($_SERVER['DOCUMENT_ROOT'] . '/website/exec/class/'. strtolower($class_name) . '.class.php');
 }
